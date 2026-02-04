@@ -1,0 +1,10 @@
+---
+alwaysApply: true
+---
+# Rule: Spec-Driven Development (SDD)
+- **Always Apply**: True
+- **Directives**:
+  1. Never write implementation logic unless a corresponding contract exists in `specs/technical.md`.
+  2. Every new function must include Type Hints and Pydantic validation.
+  3. Prioritize API resilience (retries/backoff) over local processing.
+  4. Ensure all "Thinking" is captured via Tenx MCP Sense before every commit.
