@@ -1,0 +1,26 @@
+name: Project Chimera Production Gate
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  governance:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Calls the 'install', 'lint', and 'type-check' blocks from your Makefile
+      - name: Setup Environment and Quality Linting
+        run: |
+          make install
+          make lint
+          make type-check
+
+      # Calls the 'docker-test' block from your Makefile
+      - name: Execute Containerized Audit Tests
+        run: make docker-test

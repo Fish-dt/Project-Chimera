@@ -1,19 +1,24 @@
 [project]
-name = "10-academy"
+name = "project-chimera"
 version = "0.1.0"
-description = "Add your description here"
+description = "Data Warehouse Audit and Delivery Challenge"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "litellm>=1.81.7",
-    "loguru>=0.7.3",
-    "pydantic>=2.12.5",
-    "python-dotenv>=1.2.1",
+    "pytest>=8.0.0",
+    "pandas>=2.2.0",
 ]
 
-[dependency-groups]
-dev = [
-    "pyright>=1.1.408",
-    "pytest>=9.0.2",
-    "ruff>=0.15.0",
-]
+[tool.ruff]
+# Enable strict linting
+line-length = 88
+select = ["E", "F", "I", "N"]
+
+[tool.pyright]
+# Professional-grade type checking
+include = ["."]
+typeCheckingMode = "basic"
+
+[tool.pytest.ini_options]
+# Ensures pytest looks in the right place
+testpaths = ["tests"]
