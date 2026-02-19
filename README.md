@@ -4,12 +4,6 @@
 
 ---
 
-## 🎥 Demo Video
-
-A short walkthrough of **Project Chimera** covering architecture, specs, and implementation.
-
-👉 [Watch the Loom demo](https://www.loom.com/share/054ec861456c4412a3177b074941fd2a)
-
 ## 📋 Deliverables & Task Completion
 
 ### ✅ Completed Deliverables
